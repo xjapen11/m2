@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- 
 
-################ Server Ver. 27 (2021. 3. 9.) #####################
+################ Server Ver. 27 (2021. 3. 17.) #####################
 
 import sys, os, ctypes
 import asyncio, discord, aiohttp
@@ -1458,7 +1458,7 @@ class mainCog(commands.Cog):
 	async def setting_(self, ctx):	
 		#print (ctx.message.channel.id)
 		if ctx.message.channel.id == basicSetting[7]:
-			setting_val = '버전 : Server Ver.3 (2021. 3. 9.)\n'
+			setting_val = '보탐봇버전 : Server Ver. 27 (2021. 2. 17.)\n'
 			if basicSetting[6] != "" :
 				setting_val += '음성채널 : ' + self.bot.get_channel(basicSetting[6]).name + '\n'
 			setting_val += '텍스트채널 : ' + self.bot.get_channel(basicSetting[7]).name +'\n'
@@ -1486,8 +1486,8 @@ class mainCog(commands.Cog):
 					color=0xff00ff
 					)
 			embed.add_field(
-					name="----- 제작자 -----",
-					value= '```전 사```'
+					name="-----Server 3.17일 수정 버젼 -----",
+					value= '```빛나는여포에게 문의주세요.```'
 					)
 			await ctx.send(embed=embed, tts=False)
 		else:
@@ -4086,7 +4086,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 
 	async def close(self):
 		await super().close()
-		print("디코매니저 종료 완료.")
+		print("보스 디코봇 종료 완료.")
 
 ilsang_distribution_bot : IlsangDistributionBot = IlsangDistributionBot()
 ilsang_distribution_bot.add_cog(mainCog(ilsang_distribution_bot))
